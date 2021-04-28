@@ -20,14 +20,14 @@
         }
 
         function RedirectPage(){
-                window.location.replace("http://vviptma.github.io.test/login.html");
+                window.location.replace("http://vviptma.github.io/login.html");
         }
 
         function checkCookie() {
             var user = getCookie("email");
             if (user == null) {
                 alert("Bạn chưa đăng nhập");
-                window.location.replace("http://vviptma.github.io.test/login.html");
+                RedirectPage();
             }
         }
     </script>
