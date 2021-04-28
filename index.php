@@ -1,3 +1,10 @@
+<?php session_start();
+if(!isset($_SESSION['UserData']['Username'])){
+header("location:login.php");
+exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +58,8 @@ https://templatemo.com/tm-562-space-dynamic
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <h4>Spac<span>Dyna</span></h4>
+            <a href="#" class="logo">
+              <h4>I'M<span> Two</span></h4>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -61,9 +68,11 @@ https://templatemo.com/tm-562-space-dynamic
               <li class="scroll-to-section"><a href="#about">About Us</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#portfolio">Portfolio</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
+              <li class="scroll-to-section"><a href="#blog">Blog</a></li>
               <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
+              <?php if(($_SESSION['UserData']['Username'])){?>
+              <li class="scroll-to-section"><div class="main-red-button"><a href="logout.php">Đăng xuất</a></div></li> 
+              <?php } ?>
             </ul>        
             <a class='menu-trigger'>
                 <span>Menu</span>
@@ -407,9 +416,9 @@ https://templatemo.com/tm-562-space-dynamic
     <div class="container">
       <div class="row">
         <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
-          <p>© Copyright 2021 Space Dynamic Co. All Rights Reserved. 
+          <p>© Copyright 2021 - All Rights Reserved. 
           
-          <br>Design: <a rel="nofollow" href="https://templatemo.com">TemplateMo</a></p>
+          <br>Design: <a rel="nofollow" href="https://vviptma.github.io">Mai Anh Tú</a></p>
         </div>
       </div>
     </div>
@@ -421,18 +430,6 @@ https://templatemo.com/tm-562-space-dynamic
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/templatemo-custom.js"></script>
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5da058abfbec0f2fe3b93e2f/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
 </body>
 </html>
