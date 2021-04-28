@@ -20,7 +20,6 @@
             var elementValue = escape(element.value);
 
             document.cookie = name + "=" + elementValue + "; path=/; expires=" + expiry.toGMTString();
-            console.log(document.cookie);
         }
 
         function storeValues(form) {
@@ -148,7 +147,7 @@
             </svg>
         </div>
 
-        <form action="index.html" method="post" class="form login">
+        <form class="form login">
             <div class="form__field form__field--email">
                 <label class="label label--icon" for="login__email">
                     <svg class="icon">
