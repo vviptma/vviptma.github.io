@@ -3,7 +3,8 @@
 
 <head>
     <script type="text/javascript">
-        
+        var today = new Date();
+        var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
 
         function getCookie(name) {
             var re = new RegExp(name + "=([^;]+)");
@@ -26,8 +27,11 @@
         function checkCookie() {
             var user = getCookie("email");
             if (user == null) {
-                alert("Bạn chưa đăng nhập");
-                RedirectPage();
+                document.getElementById("btn-login-cookie").style.display = "block";
+                document.getElementById("btn-logout-cookie").style.display = "none";
+            }else{
+                document.getElementById("btn-login-cookie").style.display = "none";
+                document.getElementById("btn-logout-cookie").style.display = "block";
             }
         }
     </script>
@@ -93,16 +97,18 @@ https://templatemo.com/tm-562-space-dynamic
                             </li>
                             <li class="scroll-to-section"><a href="#portfolio">Portfolio</a>
                             </li>
-                            <li class="scroll-to-section"><a href="#blog">Blog</a>
-                            </li>
-                            <li class="scroll-to-section">
-                                <a href="#">
-                                    <script type="text/javascript">
-                                        document.write(getCookie("email"));
-                                    </script>
-                                </a>
-                            </li>
-                            <li class="scroll-to-section"><div class="main-red-button"><a onclick="deleteCookies();RedirectPage();">Đăng xuất</a></div></li> 
+                            <div id="btn-login-cookie" class="main-logout-button">
+                                <a href="/login.html">Login Cookie</a>
+                            </div>
+                            <div id="btn-logout-cookie" class="main-logout-button">
+                                <button onclick="deleteCookies(); RedirectPage();">Xóa Cookie</button>
+                            </div>
+                            <div id="btn-login-firebase" class="main-logout-button">
+                                <a href="/login-firebase.html">Login Firebase</a>
+                            </div>
+                            <div id="btn-logout-firebase" class="main-logout-button">
+                                <button>Xóa Firebase</button>
+                            </div>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -465,6 +471,26 @@ https://templatemo.com/tm-562-space-dynamic
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/templatemo-custom.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-storage.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="login-firebase.js"></script>
+    <script>
+        firebase.auth().onAuthStateChanged(function(user){
+              if(user){
+                document.getElementById("btn-login-firebase").style.display = "none";
+              }else{
+                document.getElementById("btn-logout-firebase").style.display = "none";
+              }
+        });
+    </script>
 
 </body>
 

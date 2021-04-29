@@ -62,3 +62,14 @@ function saveMessage(name, company, email, phone, message){
     message:message
   });
 }
+
+const dbRef = firebase.database().ref();
+dbRef.child("email").get().then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+  } else {
+    console.log("No data available");
+  }
+}).catch((error) => {
+  console.error(error);
+});
