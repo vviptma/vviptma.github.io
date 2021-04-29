@@ -156,11 +156,8 @@
                     <span class="hidden">Email</span>
                 </label>
                 <div class="form__input-wrapper">
-                  <input class="field" type="text"  onkeydown="if (event.keyCode == 13) document.getElementById('submitButton').click()" id="login__email" name="email-field" value="maianhtu96@gmail.com" placeholder="e-mail" style="text-transform: lowercase;" autofocus required><!--
-              FF is ignoring position relative of form__input-wrapper so added a wrapper for .underline.
-              NOTE: just the precense of this comment fixes this FF issue (making the underline-wrapper unncessary).
-              But I'd rather not rely on a comment.
-            -->
+                  <input class="field" type="text"  onkeydown="if (event.keyCode == 13) document.getElementById('submitButton').click()" id="login__email" name="email-field" placeholder="e-mail" style="text-transform: lowercase;" autofocus required>
+                  <small>Tài khoản: maianhtu96@gmail.com</small>
                     <div class="underline-wrapper">
                         <span class="underline"></span>
                     </div>
@@ -175,12 +172,8 @@
                     <span class="hidden">Password</span>
                 </label>
                 <div class="form__input-wrapper">
-                    <input id="login__password" type="password" name="pass" class="field form__input" placeholder="Password" value="123456" required>
-                    <!--
-              FF is ignoring position relative of form__input-wrapper so added a wrapper for .underline.
-              NOTE: just the precense of this comment fixes this FF issue (making the underline-wrapper unncessary).
-              But I'd rather not rely on a comment.
-            -->
+                    <input id="login__password" type="password" name="pass" class="field form__input" placeholder="Password" required>
+                    <small>Mật khẩu: 123456</small>
                     <div class="underline-wrapper">
                         <span class="underline"></span>
                     </div>

@@ -32,7 +32,8 @@
             console.log(errorCode);
             console.log(errorMessage);
 
-            window.alert("Message:" + errorMessage);
+            //window.alert("Message:" + errorMessage);
+            window.alert("Message: Sai thong tin tai khoan mat khau");
         });
     }else{
         window.alert("Chua nhap du lieu dang nhap!");
