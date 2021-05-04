@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    /* background-size: cover; */
+    background-size: auto 100%;
+    transition: 0s linear;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dr-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dr-img {
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .dr-img {
+        background-size: auto 70%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .dr-img {
+        background-size: auto 65%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .dr-img {
+        background-size: auto 60%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .dr-img {
+        background-size: auto 52%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .dr-img {
+        background-size: auto 45%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .dr-img {
+        background-size: contain;
+        background-position: center;
+    }
+}
+#doituong3d{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
