@@ -1,0 +1,92 @@
+html {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #000;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #screen {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden;
+    font-family: Segoe UI, Verdana, Arial, Sans-Serif;
+    color: #fff;
+    font-size: 13px;
+  }
+  
+  #screen canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+  
+  #info {
+    position: absolute;
+    text-align: left;
+    top: 19%;
+    left: 2%;
+    width: 180px;
+    height: 340px;
+    color: #666;
+    font-size: 1em;
+  }
+  
+  #info .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.3;
+  }
+  
+  #info .content {
+    position: absolute;
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #info .w {
+    color: #fff;
+  }
+  
+  #info hr {
+    width: 90%;
+    border: none;
+    background-color: #666;
+    height: 1px;
+  }
+  
+  #info h1 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: -moz-linear-gradient( top, #333333 0%, #000000);
+    background: -webkit-gradient( linear, left top, left bottom, from(#333333), to(#000000));
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    border: 1px solid #000000;
+    -moz-box-shadow: 0px 1px 1px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 1px 1px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 1px rgba(000, 000, 000, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 1);
+    text-shadow: 0px -1px 0px rgba(000, 000, 000, 0.7), 0px 1px 0px rgba(255, 255, 255, 0.3);
+  }

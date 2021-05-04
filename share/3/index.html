@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cubes</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+<div id="screen"> 
+    <canvas id="canvas">HTML5 CANVAS</canvas> 
+    <div id="info"> 
+        <div class="background"></div> 
+            <div class="content"> 
+                <h1>3D Cubes</h1> 
+                <table> 
+                    <tr><td class="w">drag</td><td>→ rotate X,Y axis</td></tr> 
+                    <tr><td class="w">wheel</td><td>→ rotate Z axis</td></tr> 
+                    <tr><td class="w">click</td><td>→ create cube</td></tr> 
+                </table> 
+                <hr> 
+                <input type="checkbox" id="white"><label for="white"> white background</label><br> 
+                <input type="checkbox" id="alpha"><label for="alpha"> transparency</label><br> 
+                <input type="checkbox" id="autor"><label for="autor"> auto rotation</label><br> 
+                <input type="checkbox" id="destroy"><label for="destroy"> destroy cubes</label><br> 
+                <hr> 
+                - <span id="fps" class="w">00</span> FPS<br> 
+                - <span id="npoly" class="w">00</span> Faces<br> 
+                <p align="center"><input type="button" value="RESET" id="reset" class="button"></input><input type="button" value="STOP" id="stopgo" class="button"></input></p> 
+            </div> 
+        </div> 
+    </div> 
+    <script src="app.js"></script>
+    
+</body>
+</html>
